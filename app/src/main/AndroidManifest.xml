@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.WarningActivity"></activity>
+        <activity android:name=".Activities.WarningActivity" />
+        <activity android:name=".Activities.MainActivity"></activity>
     </application>
 
 </manifest>

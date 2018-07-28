@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "320950591658",
+    "firebase_url": "https://loodosapp.firebaseio.com",
+    "project_id": "loodosapp",
+    "storage_bucket": "loodosapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320950591658:android:7044387d26aee386",
+        "android_client_info": {
+          "package_name": "com.example.onur.loodosapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320950591658-8h1eca96asddgfvojoan49l2l8a25f0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onur.loodosapp",
+            "certificate_hash": "d4ac8f2a6e957fe2cb1c75c0717f66aa9a725276"
+          }
+        },
+        {
+          "client_id": "320950591658-1m1ovek0j417jtupfcphlusmbl0n3vq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwicTnOLN8AuoyXPDVNGb-sUJNM1I1C2U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320950591658-1m1ovek0j417jtupfcphlusmbl0n3vq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
