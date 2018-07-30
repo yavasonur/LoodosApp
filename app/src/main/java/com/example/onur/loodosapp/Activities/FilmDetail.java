@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.example.onur.loodosapp.FirebaseService.MyFirebaseAnalytics;
 import com.example.onur.loodosapp.Model.FDetail;
 import com.example.onur.loodosapp.R;
 import com.google.gson.Gson;
@@ -41,6 +42,7 @@ public class FilmDetail extends AppCompatActivity {
     private String Url_JSON = "http://www.omdbapi.com/?apikey=1d60cee2&i=";
     private StringRequest stringRequest;
     private RequestQueue requestQueue;
+    private MyFirebaseAnalytics myFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,5 +105,7 @@ public class FilmDetail extends AppCompatActivity {
         collapsingToolbarLayout.setTitleEnabled(true);
         collapsingToolbarLayout.setTitle(fDetail.getTitle());
         Glide.with(getBaseContext()).load(fDetail.getPoster()).into(imageViewFilmDetail);
+        myFirebaseAnalytics = new MyFirebaseAnalytics(this);
+        myFirebaseAnalytics.LogEventsSave(fDetail);
     }
 }

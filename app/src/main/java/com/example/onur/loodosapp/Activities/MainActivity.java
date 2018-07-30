@@ -1,12 +1,9 @@
 package com.example.onur.loodosapp.Activities;
 
-import android.support.transition.Transition;
-import android.support.transition.TransitionInflater;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.transition.Fade;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
