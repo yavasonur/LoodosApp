@@ -32,7 +32,6 @@ public class SplashScreen extends Activity {
         if(!myClass.InternetControl()){
             Intent i = new Intent(this,WarningActivity.class);
             startActivity(i);
-            finish();
         }
         else{
 
@@ -65,7 +64,6 @@ public class SplashScreen extends Activity {
                     sleep(3000);
                     Intent i = new Intent(SplashScreen.this,MainActivity.class);
                     startActivity(i);
-
                 }catch (Exception e) {
 
                 }finally {
@@ -76,4 +74,5 @@ public class SplashScreen extends Activity {
         t1.start();
 
     }
+
 }
