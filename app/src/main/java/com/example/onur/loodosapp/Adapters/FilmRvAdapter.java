@@ -1,6 +1,7 @@
 package com.example.onur.loodosapp.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.onur.loodosapp.Activities.FilmDetail;
 import com.example.onur.loodosapp.Model.Film;
 import com.example.onur.loodosapp.R;
 
@@ -43,13 +45,22 @@ public class FilmRvAdapter extends RecyclerView.Adapter<FilmRvAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         try{
             Glide.with(context).load(films.get(position).getPoster()).into(holder.filmImageView);
             holder.txtFilmTitle.setText(films.get(position).getTitle());
             holder.txtFilmType.setText("Film Type : " + films.get(position).getType());
             holder.txtFilmYear.setText("Year : " + films.get(position).getYear());
+
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(context, FilmDetail.class);
+                    i.putExtra("imdbId",films.get(position).getImdbId());
+                    context.startActivity(i);
+                }
+            });
 
         }catch (Exception e){
         }
